@@ -4,7 +4,7 @@ import Particles from "@/components/Particles/Particles";
 
 const Footer: React.FC = () => {
   return (
-     <section
+    <section
       id="contact"
       className="w-screen  flex justify-center items-center pt-5 pb-5 relative overflow-hidden"
     >
@@ -25,10 +25,10 @@ const Footer: React.FC = () => {
           className="w-full h-full"
         />
       </div>
- 
+
       <div className="container mx-auto text-center relative z-20">
         {/* Social Links */}
-       
+
         <div className="flex justify-center space-x-6 mb-4 relative z-30">
           {/* GitHub */}
           <a

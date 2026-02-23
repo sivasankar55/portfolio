@@ -20,7 +20,7 @@ type ExperienceItem = {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    title: "Summer Intern: Full Stack Developer",
+    title: "Winter Intern: Full Stack Developer",
     company: "Trackpi Pvt Ltd",
     duration: "December 2025 - March 2026",
     description: "As a full-stack intern, I built and optimized responsive UIs with React and Tailwind, developed 10+ secure Node.js APIs with JWT and role-based access, and designed complex PostgreSQL schemas. I collaborated daily in an Agile team of 7, using Git for version control and code reviews."
