@@ -11,5 +11,5 @@ export const personalData = {
   // instagram: 'https://www.instagram.com/_anmol.kush/',
   leetcode: "",
   devUsername: "Sivasankar",
-  resume: "https://drive.google.com/file/d/1smPZp5c74PKHGnsgG0bomTGVjy6kUisd/view?usp=drive_link"
+  resume: "https://drive.google.com/file/d/1WdvZuAVaaZf2-C1x4GpWkJkh32Tw_Dfl/view"
 }
