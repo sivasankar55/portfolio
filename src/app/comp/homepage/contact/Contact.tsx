@@ -33,49 +33,49 @@ const Contact = () => {
     });
   };
 
- const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
-  setLoading(true);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
 
-  // 1️⃣ Send to You
-  emailjs
-    .send(
-      "service_s92a4is",
-      "template_x3mprji",
-      {
-        from_name: form.name,
-        from_email: form.email,
-        message: form.message,
-        to_name: "Anmol",
-      },
-      "0tbEXV-PNSLRcEdYZ"
-    )
-    .then(() => {
-      // 2️⃣ Send Auto Reply
-      return emailjs.send(
-        "service_s92a4is",
-        "template_sqa36t9",
+    // 1️⃣ Send to You
+    emailjs
+      .send(
+        "service_qodybk9",
+        "template_eiw0tbh",
         {
           from_name: form.name,
           from_email: form.email,
           message: form.message,
-          to_name: "Anmol",
+          to_name: "Sivasankar",
         },
-        "0tbEXV-PNSLRcEdYZ"
-      );
-    })
-    .then(() => {
-      setLoading(false);
-      alert("Thank you. I will get back to you as soon as possible.");
+        "EMcHPO3EIPsrl1-HU"
+      )
+      .then(() => {
+        // 2️⃣ Send Auto Reply
+        return emailjs.send(
+          "service_qodybk9",
+          "template_z7kxl2x",
+          {
+            from_name: form.name,
+            from_email: form.email,
+            message: form.message,
+            to_name: "Sivasankar",
+          },
+          "EMcHPO3EIPsrl1-HU"
+        );
+      })
+      .then(() => {
+        setLoading(false);
+        alert("Thank you. I will get back to you as soon as possible.");
 
-      setForm({ name: "", email: "", message: "" });
-    })
-    .catch((error) => {
-      setLoading(false);
-      console.error(error);
-      alert("Something went wrong. Please try again.");
-    });
-};
+        setForm({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        setLoading(false);
+        console.error(error);
+        alert("Something went wrong. Please try again.");
+      });
+  };
 
 
   return (
