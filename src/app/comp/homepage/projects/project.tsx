@@ -12,7 +12,7 @@ const projects = [
   {
     name: "E-Commerce-Store",
     description:
-      "A full-stack, dual-role (Student/Recruiter) MERN application. It features a responsive React/Tailwind UI with protected client-side routing, a Node.js/Express.js API for full CRUD operations, and secure, role-based authentication using JWT. Manages global state with Redux Toolkit and integrates Cloudinary/Multer for cloud-based resume uploads.",
+      "Developed a scalable E-Commerce platform using the MERN stack with Redis caching and Stripe payment integration. Implemented JWT authentication with refresh tokens, admin analytics dashboard, product and order management, and secure checkout with performance optimizations and security best practices",
     tags: [
       {
         name: "react",
@@ -66,25 +66,37 @@ const projects = [
     source_code_link: "https://github.com/anmol1kush/AIFusion",
   },
   {
-    name: "Hospital Management System",
+    name: "Lingofy",
     description:
-      "A Java-based console application demonstrating strong OOP principles. It uses Inheritance and Polymorphism to model and manage Doctors, Patients, and Medicines, with Java Collections (ArrayList) for dynamic data handling. The app features a stable, menu-driven interface for core operations (billing, salary, inventory) and includes custom exception handling for invalid inputs and out-of-stock cases.",
+      "A full-stack real-time language exchange platform built with the MERN stack, featuring instant messaging, video calls, JWT authentication, and customizable UI themes. Integrates Stream APIs for scalable communication and uses Zustand with TanStack Query for efficient state and data management.",
     tags: [
       {
-        name: "java",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "oop",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
-        name: "collections",
+        name: "mongodb",
         color: "pink-text-gradient",
+      },
+      {
+        name: "zustand",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "stream",
+        color: "blue-text-gradient",
       },
     ],
     image: 'Hospital.png', // You will need to add a file with this name
-    source_code_link: "https://github.com/anmol1kush/Hospital_Management_System", // Change this if it's in a different repo
+    source_code_link: "https://github.com/sivasankar55/Lingofy", // Change this if it's in a different repo
   },
   {
     name: "Hotel Management System",
@@ -179,6 +191,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors duration-300"
+              title="Source Code"
             >
               <svg
                 className="w-5 h-5 text-white"
