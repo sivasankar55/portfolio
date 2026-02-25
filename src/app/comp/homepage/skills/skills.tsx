@@ -18,31 +18,31 @@ type Skill = {
 const skills: Skill[] = [
   // Frontend Technologies
   { name: "React", icon: "⚛️", color: "#61DAFB", category: "Frontend" },
-  // { name: "Next.js", icon: "▲", color: "#fffff", category: "Frontend" },
-  // { name: "TypeScript", icon: "🔷", color: "#3178C6", category: "Frontend" },
+  { name: "Next.js", icon: "▲", color: "#FFFFFF", category: "Frontend" },
+  { name: "TypeScript", icon: "🔷", color: "#3178C6", category: "Frontend" },
   { name: "JavaScript", icon: "🟨", color: "#F7DF1E", category: "Frontend" },
   { name: "HTML5", icon: "🌐", color: "#E34F26", category: "Frontend" },
   { name: "CSS3", icon: "🎨", color: "#1572B6", category: "Frontend" },
   { name: "Tailwind CSS", icon: "💨", color: "#06B6D4", category: "Frontend" },
+  { name: "React Query", icon: "📡", color: "#FF4154", category: "Frontend" },
   { name: "Redux", icon: "💎", color: "#CC6699", category: "Frontend" },
-  
+
   // Backend Technologies
   { name: "Node.js", icon: "🟢", color: "#339933", category: "Backend" },
-  { name: "Express.js", icon: "🚀", color: "#fffff", category: "Backend" },
-  { name: "Python", icon: "🐍", color: "#3776AB", category: "Backend" },
+  { name: "Express.js", icon: "🚀", color: "#FFFFFF", category: "Backend" },
   { name: "JAVA", icon: "🎯", color: "#CC6699", category: "Backend" },
   { name: "MongoDB", icon: "🍃", color: "#47A248", category: "Database" },
   { name: "PostgreSQL", icon: "🐘", color: "#336791", category: "Database" },
   { name: "MySQL", icon: "🐬", color: "#4479A1", category: "Database" },
-  
+  { name: "Prisma", icon: "◮", color: "#5A67D8", category: "Database" },
+  { name: "Firebase", icon: "🔥", color: "#FFCA28", category: "Database" },
+
   // Tools & Others
   { name: "Git", icon: "📚", color: "#F05032", category: "Tools" },
   { name: "Docker", icon: "🐳", color: "#2496ED", category: "Tools" },
-  { name: "AWS", icon: "☁️", color: "#FF9900", category: "Cloud" },
-  { name: "Numpy", icon: "🔥", color: "#FFCA28", category: "Cloud" },
-  { name: "Pandas", icon: "🐼", color: "#339933", category: "Cloud" },
-  { name: "Scikit-learn", icon: "🎨", color: "#F24E1E", category: "Design" },
   { name: "VS Code", icon: "💻", color: "#007ACC", category: "Tools" },
+  { name: "Figma", icon: "🎨", color: "#F24E1E", category: "Tools" },
+  { name: "Postman", icon: "📮", color: "#FF6C37", category: "Tools" },
 ];
 
 type SkillCardProps = {
@@ -66,7 +66,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ index, skill }) => (
     />
 
     {/* Main card */}
-    <div 
+    <div
       className="rounded-xl bg-[#100D25] backdrop-blur-md p-4 h-24 flex flex-col items-center justify-center gap-2 border border-white/5 transition-all duration-500 group-hover:border-opacity-60 group-hover:shadow-[0_12px_40px_-6px_rgba(0,0,0,0.5)]"
       style={{
         borderColor: `rgba(${hexToRgb(skill.color)}, 0.15)`,
@@ -74,15 +74,15 @@ const SkillCard: React.FC<SkillCardProps> = ({ index, skill }) => (
       }}
     >
       {/* Skill icon */}
-      <div 
+      <div
         className="text-2xl transition-transform duration-300 group-hover:scale-125 group-hover:-translate-y-[1px]"
         style={{ filter: `drop-shadow(0 0 10px ${skill.color}66)` }}
       >
         {skill.icon}
       </div>
-      
+
       {/* Skill name */}
-      <h3 
+      <h3
         className="text-white text-sm font-semibold text-center transition-colors duration-300"
         style={{ color: skill.color }}
       >
@@ -148,57 +148,57 @@ export default function Skills() {
         className="w-screen min-h-screen flex justify-center pt-5 pb-20"
       >
         <div className="w-[75%] ">
-        {/* Section Header */}
-        <motion.div
-          variants={textVariant()}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-          className=" mb-16"
-        >
-          <p className="sm:text-[25px] text-[20px] text-gray-400 uppercase tracking-wider py-3">
-            What I Do
-          </p>
-          <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[32px] leading-tight mb-4">
-            Skills & Technologies
-          </h2>
-        
-        </motion.div>
+          {/* Section Header */}
+          <motion.div
+            variants={textVariant()}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className=" mb-16"
+          >
+            <p className="sm:text-[25px] text-[20px] text-gray-400 uppercase tracking-wider py-3">
+              What I Do
+            </p>
+            <h2 className="text-white font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[32px] leading-tight mb-4">
+              Skills & Technologies
+            </h2>
 
-        {/* Skills Grid */}
-        <motion.div
-          variants={staggerContainer(0.1, 0.3)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
-        >
-          {skills.map((skill, index) => (
-            <SkillCard
-              key={skill.name}
-              index={index}
-              skill={skill}
-            />
-          ))}
-        </motion.div>
+          </motion.div>
 
-        {/* Additional Info */}
-        <motion.div
-          variants={fadeIn("up", "tween", 0.8, 1)}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.25 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30">
-            <span className="text-purple-400 text-sm font-medium">
-              Always learning new technologies
-            </span>
-            <span className="text-2xl animate-bounce">🚀</span>
-          </div>
-        </motion.div>
-      </div>
-    </section>
+          {/* Skills Grid */}
+          <motion.div
+            variants={staggerContainer(0.1, 0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.1 }}
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6"
+          >
+            {skills.map((skill, index) => (
+              <SkillCard
+                key={skill.name}
+                index={index}
+                skill={skill}
+              />
+            ))}
+          </motion.div>
+
+          {/* Additional Info */}
+          <motion.div
+            variants={fadeIn("up", "tween", 0.8, 1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.25 }}
+            className="mt-16 text-center"
+          >
+            <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30">
+              <span className="text-purple-400 text-sm font-medium">
+                Always learning new technologies
+              </span>
+              <span className="text-2xl animate-bounce">🚀</span>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </>
   );
 }
