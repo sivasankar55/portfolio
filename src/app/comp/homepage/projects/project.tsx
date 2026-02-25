@@ -10,7 +10,7 @@ import {
 
 const projects = [
   {
-    name: "Intern-Job",
+    name: "E-Commerce-Store",
     description:
       "A full-stack, dual-role (Student/Recruiter) MERN application. It features a responsive React/Tailwind UI with protected client-side routing, a Node.js/Express.js API for full CRUD operations, and secure, role-based authentication using JWT. Manages global state with Redux Toolkit and integrates Cloudinary/Multer for cloud-based resume uploads.",
     tags: [
@@ -31,7 +31,7 @@ const projects = [
         color: "pink-text-gradient",
       },
       {
-        name: "redux",
+        name: "stripe",
         color: "blue-text-gradient",
       },
       {
@@ -41,7 +41,7 @@ const projects = [
 
     ],
     image: 'InternJob.png',
-    source_code_link: "https://github.com/anmol1kush/Intern-Job",
+    source_code_link: "https://github.com/sivasankar55/E-Commerce-Store",
   },
   {
     name: "AIFusion",
@@ -202,12 +202,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <p
               key={`${name}-${tag.name}`}
               className={`text-[14px] ${tag.color === "blue-text-gradient"
-                  ? "text-blue-400"
-                  : tag.color === "green-text-gradient"
-                    ? "text-green-400"
-                    : tag.color === "pink-text-gradient"
-                      ? "text-pink-400"
-                      : "text-gray-400"
+                ? "text-blue-400"
+                : tag.color === "green-text-gradient"
+                  ? "text-green-400"
+                  : tag.color === "pink-text-gradient"
+                    ? "text-pink-400"
+                    : "text-gray-400"
                 }`}
             >
               #{tag.name}
