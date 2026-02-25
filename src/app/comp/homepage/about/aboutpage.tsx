@@ -44,7 +44,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ index, title, icon }) => (
       viewport={{ once: true, amount: 0.35 }}
       className="relative rounded-2xl p-[2px] transition-all duration-400 w-full"
     >
-     
+
       <div
         aria-hidden
         className="absolute inset-0 rounded-2xl pointer-events-none opacity-0 transition-opacity duration-400 group-hover:opacity-60"
@@ -107,9 +107,9 @@ export default function Aboutpage() {
           viewport={{ once: true, amount: 0.25 }}
           className="mt-4 md:mt-6 lg:mt-8 mb-8 md:mb-12 lg:mb-16 text-zinc-300/90 text-sm sm:text-base md:text-[17px] leading-6 sm:leading-7 md:leading-8 max-w-5xl"
         >
-         I'm a  Fullstack developer with a passion for building complete, product-focused applications. I have practical experience developing full-stack solutions from concept to deployment, working across technologies like React, Node.js, and TypeScript, as well as various databases including MongoDB and PostgreSQL.
-         <br className="hidden sm:block" />
-         <span className="sm:inline block mt-2 sm:mt-0">I enjoy tackling complex challenges, integrating AI APIs like Gemini, and implementing secure payment systems with Razorpay and Stripe. I'm focused on writing clean, high-performance code to turn complex problems into simple and intuitive user experiences</span>
+          I'm a Fullstack developer with a passion for building complete, product-focused applications. I have practical experience developing full-stack solutions from concept to deployment, working across technologies like React, Node.js, and Javascript, as well as various databases including MongoDB and MySQL.
+          <br className="hidden sm:block" />
+          <span className="sm:inline block mt-2 sm:mt-0">I enjoy tackling complex challenges, integrating AI APIs like Gemini, and implementing secure payment systems with Stripe. I'm focused on writing clean, high-performance code to turn complex problems into simple and intuitive user experiences</span>
         </motion.p>
 
         <motion.div
@@ -120,7 +120,7 @@ export default function Aboutpage() {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6"
         >
 
-        
+
           {services.map((service, index) => (
             <ServiceCard
               key={service.title}
@@ -129,7 +129,7 @@ export default function Aboutpage() {
               icon={service.icon}
             />
           ))}
-         
+
         </motion.div>
       </div>
     </section>
