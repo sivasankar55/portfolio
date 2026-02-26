@@ -12,7 +12,7 @@ const projects = [
   {
     name: "E-Commerce-Store",
     description:
-      "Developed a scalable E-Commerce platform using the MERN stack with Redis caching and Stripe payment integration. Implemented JWT authentication with refresh tokens, admin analytics dashboard, product and order management, and secure checkout with performance optimizations and security best practices",
+      "An advanced full-stack E-Commerce application built using Node.js, Express, MongoDB, Redis, and React. It includes secure JWT authentication with access/refresh tokens, a complete shopping workflow (cart, checkout, coupons), Stripe payment integration, and a powerful admin dashboard for managing products, orders, and analytics. Redis caching is used for performance optimization, while Cloudinary handles media storage. The system incorporates rate limiting, input validation, and sanitization for enhanced security and reliability.",
     tags: [
       {
         name: "react",
@@ -40,35 +40,54 @@ const projects = [
       },
 
     ],
-    image: 'InternJob.png',
+    image: 'ecommerce.png',
     source_code_link: "https://github.com/sivasankar55/E-Commerce-Store",
   },
   {
-    name: "AIFusion",
+    name: "Syncly",
     description:
-      "An AI-powered SaaS platform for text and visual generation. I engineered the core AI functionality by integrating the Gemini and image.io APIs, and built a complete monetization model with Razorpay for payment processing and a credit-based system for feature access. The scalable MERN-stack backend (Node.js, Express, MongoDB) manages user accounts, authentication, subscription plans, and API usage tracking.",
+      "A modern real-time collaboration platform combining team chat and video conferencing into a unified workspace. Built with React and Node.js, it integrates Stream Chat and Video SDKs for messaging, presence indicators, and secure video meetings with token-based room access. Authentication is handled with Clerk, while TanStack Query optimizes server-state management and caching. The application includes lazy-loaded routes, global Axios interceptors for token handling, and production-grade monitoring with Sentry for real-time error tracking.",
     tags: [
-
       {
-        name: "image.io API",
-        color: "green-text-gradient",
-      },
-      {
-        name: "gemini API",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "razorpay",
+        name: "tailwind",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
         color: "pink-text-gradient",
       },
+      {
+        name: "expressjs",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tanstack",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "sentry",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "inngest",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Clerk",
+        color: "blue-text-gradient",
+      },
     ],
-    image: 'main2.png', // You will need to add a file with this name
-    source_code_link: "https://github.com/anmol1kush/AIFusion",
+    image: 'syncly.png', // You will need to add a file with this name
+    source_code_link: "https://github.com/sivasankar55/Syncly", // Change this if it's in a different repo
   },
   {
     name: "Lingofy",
     description:
-      "A full-stack real-time language exchange platform built with the MERN stack, featuring instant messaging, video calls, JWT authentication, and customizable UI themes. Integrates Stream APIs for scalable communication and uses Zustand with TanStack Query for efficient state and data management.",
+      "A full-stack real-time language exchange platform built with the MERN stack. It features instant messaging and video communication powered by Stream Chat and Video APIs, including typing indicators, reactions, and 1-on-1/group calls with screen sharing and recording. The system implements secure JWT authentication with protected routes, Zustand for global state management, and TanStack Query for efficient server data synchronization. Designed with scalable architecture, customizable multi-theme UI, and robust frontend/backend error handling for a smooth user experience.",
     tags: [
       {
         name: "react",
@@ -94,34 +113,35 @@ const projects = [
         name: "stream",
         color: "blue-text-gradient",
       },
+      {
+        name: "TanStack Query",
+        color: "blue-text-gradient",
+      },
     ],
-    image: 'Hospital.png', // You will need to add a file with this name
+    image: '/lingofy.png?v=1', // You will need to add a file with this name
     source_code_link: "https://github.com/sivasankar55/Lingofy", // Change this if it's in a different repo
   },
   {
-    name: "Hotel Management System",
+    name: "AIFusion",
     description:
-      "A full-stack hotel management application built as a college DBMS project. It features user authentication, room selection, date-based booking, a payment system, and user reviews.The backend is a comprehensive RESTful API built with Node.js and Express.js, connected to a normalized MySQL database to manage users, rooms, and bookings.",
+      "An AI-powered SaaS platform for text and visual generation. I engineered the core AI functionality by integrating the Gemini and image.io APIs, and built a complete monetization model with Razorpay for payment processing and a credit-based system for feature access. The scalable MERN-stack backend (Node.js, Express, MongoDB) manages user accounts, authentication, subscription plans, and API usage tracking.",
     tags: [
+
       {
-        name: "react",
+        name: "image.io API",
+        color: "green-text-gradient",
+      },
+      {
+        name: "gemini API",
         color: "blue-text-gradient",
       },
       {
-        name: "nodejs",
-        color: "green-text-gradient",
-      },
-      {
-        name: "mysql",
+        name: "razorpay",
         color: "pink-text-gradient",
       },
-      {
-        name: "expressjs",
-        color: "green-text-gradient",
-      },
     ],
-    image: 'main.png', // You will need to add a file with this name
-    source_code_link: "https://github.com/anmol1kush/Hotel-management-system", // Change this if it's in a different repo
+    image: 'AiFusion.png', // You will need to add a file with this name
+    source_code_link: "https://github.com/anmol1kush/AIFusion",
   },
   //  {
   //   name: "FAQ & Support Chatbot",
@@ -177,7 +197,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         glareEnable={true}
         glareMaxOpacity={0.3}
         scale={1.05}
-        className="bg-[#100D25] p-4 rounded-2xl sm:w-[350px] w-full border border-white/5 flex flex-col h-[620px] sm:h-[580px]"
+        className="bg-[#100D25] p-4 rounded-2xl sm:w-[350px] w-full border border-white/5 flex flex-col min-h-[620px] sm:min-h-[580px] h-auto"
 
       >
         <div className="relative w-full h-[200px]">
@@ -283,3 +303,4 @@ export default function Project() {
   );
 }
 
+ 

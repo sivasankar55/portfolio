@@ -8,7 +8,6 @@ export const personalData = {
   address: 'Ernakulam, Kerala, India',
   github: 'https://github.com/sivasankar55',
   linkedIn: 'https://www.linkedin.com/in/ctrl-bug/',
-  // instagram: 'https://www.instagram.com/_anmol.kush/',
   leetcode: "",
   devUsername: "Sivasankar",
   resume: "https://drive.google.com/file/d/1WdvZuAVaaZf2-C1x4GpWkJkh32Tw_Dfl/view"
