@@ -25,6 +25,13 @@ const experiences: ExperienceItem[] = [
     duration: "December 2025 - March 2026",
     description: "As a full-stack intern, I built and optimized responsive UIs with React and Tailwind, developed 10+ secure Node.js APIs with JWT and role-based access, and designed mongodb schemas. I collaborated daily in an Agile team of 4, using Git for version control and code reviews."
   },
+  {
+    id: 2,
+    title: "Summer Intern: Frontend Developer",
+    company: "Smart Swift Innovations",
+    duration: "June 2025 - September 2025",
+    description: "Built a React-based request and approval management system with real-time updates, improving workflow efficiency and reducing processing time by 25%. Developed reusable UI components, integrated secure REST APIs, and collaborated with backend teams in an Agile environment."
+  },
 ];
 
 export default function Experience(): React.ReactElement {
