@@ -10,5 +10,5 @@ export const personalData = {
   linkedIn: 'https://www.linkedin.com/in/ctrl-bug/',
   leetcode: "",
   devUsername: "Sivasankar",
-  resume: "https://drive.google.com/file/d/1HNHDR94EJ2VwovS8-E7etj4HCc25QmOd/view?usp=sharing"
+  resume: "https://drive.google.com/file/d/1vRlZmu2uAGH89bfP9aSTkfX4rmuXg_hr/view?usp=sharing"
 }
