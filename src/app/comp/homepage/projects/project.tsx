@@ -42,6 +42,7 @@ const projects = [
     ],
     image: 'ecommerce.png',
     source_code_link: "https://github.com/sivasankar55/E-Commerce-Store",
+    live_link: "https://e-commerce-store-gjm4.onrender.com/",
   },
   {
     name: "Syncly",
@@ -83,6 +84,7 @@ const projects = [
     ],
     image: 'syncly.png', // You will need to add a file with this name
     source_code_link: "https://github.com/sivasankar55/Syncly", // Change this if it's in a different repo
+    live_link: "https://syncly-frontend.vercel.app/",
   },
   {
     name: "Lingofy",
@@ -120,11 +122,12 @@ const projects = [
     ],
     image: '/lingofy.png?v=1', // You will need to add a file with this name
     source_code_link: "https://github.com/sivasankar55/Lingofy", // Change this if it's in a different repo
+    live_link: "https://lingofy.onrender.com/",
   },
   {
     name: "AIFusion",
     description:
-      "An AI-powered SaaS platform for text and visual generation. I engineered the core AI functionality by integrating the Gemini and image.io APIs, and built a complete monetization model with Razorpay for payment processing and a credit-based system for feature access. The scalable MERN-stack backend (Node.js, Express, MongoDB) manages user accounts, authentication, subscription plans, and API usage tracking.",
+      "An AI-powered SaaS platform for multimodal content generation, enabling users to create text and visual outputs through integrated third-party AI services. Built using a scalable MERN-stack architecture, the system integrates Gemini APIs for intelligent text generation and external image generation APIs for visual content creation. The application implements secure authentication, subscription-based monetization with Razorpay payment integration, and a credit-based usage system to manage API consumption efficiently. The backend handles user management, billing workflows, and API orchestration, while the frontend delivers a responsive and interactive user experience. Designed with modular architecture and production-ready deployment practices, the platform demonstrates strong understanding of AI integration, SaaS system design, and payment infrastructure.",
     tags: [
 
       {
@@ -141,37 +144,65 @@ const projects = [
       },
     ],
     image: 'AiFusion.png', // You will need to add a file with this name
-    source_code_link: "https://github.com/anmol1kush/AIFusion",
+    source_code_link: "https://github.com/sivasankar55/AIFusion",
+    live_link: "https://github.com/sivasankar55/AIFusion",
   },
-  //  {
-  //   name: "FAQ & Support Chatbot",
-  //   description:
-  //     "A custom chatbot built with React, Node.js, and MongoDB, designed to answer specific questions from a pre-defined knowledge base. Instead of using costly live AI, it intelligently matches user queries to a database of stored questions and answers, providing instant, accurate support. Features a responsive UI with smooth message animations and auto-scroll.",
-  //   tags: [
-  //     {
-  //       name: "react",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "nodejs",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "mongodb",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "tailwind",
-  //       color: "pink-text-gradient",
-  //     },
-  //     {
-  //       name: "expressjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //   ],
-  //   image: 'Coming-Soon.jpg', // You will need to add a file with this name
-  //   source_code_link: "https://github.com/anmol1kush", // Change this if it's in a different repo
-  // },
+  {
+    name: "Chat-App",
+    description:
+      "A full-stack real-time messaging application built with the MERN stack, enabling users to communicate instantly through WebSocket-based bidirectional communication using Socket.IO. The platform includes secure JWT authentication, user presence detection, and dynamic chat interfaces for seamless conversations. It implements responsive UI components with modern styling and efficient state handling to ensure smooth real-time updates and user experience. The backend manages message persistence, user sessions, and event-driven communication, demonstrating scalable architecture for real-time systems. Real-time chat applications commonly rely on WebSockets to provide instant updates without page refreshes, improving responsiveness and user interaction.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "DaisyUI",
+        color: "green-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Socket.io",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: 'chat-app.png', // You will need to add a file with this name
+    source_code_link: "https://github.com/sivasankar55/Chat-App", // Change this if it's in a different repo
+    live_link: "https://chat-app-clone-ph1r.onrender.com/login",
+  },
+  {
+    name: "Twitter",
+    description:
+      "A full-stack social media platform inspired by Twitter, built using the MERN stack with a focus on scalable architecture and responsive user experience. The application implements secure JWT-based authentication, protected routes, and server-state synchronization using React Query for efficient data fetching and caching. Core features include post creation, likes, comments, user follow suggestions, notifications, and profile management with image uploads handled via Cloudinary. The backend manages user relationships, content persistence, and event-driven notification workflows, demonstrating strong understanding of RESTful API design, media handling, and state consistency across distributed components. The system is deployed with production-ready configuration, emphasizing performance, reliability, and modular design principles.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "cloudinary",
+        color: "blue-text-gradient",
+      },
+    ],
+    image: 'twitter.png', // You will need to add a file with this name
+    source_code_link: "https://github.com/sivasankar55/Twitter-App", // Change this if it's in a different repo
+    live_link: "https://twitter-clone-yblh.onrender.com/login",
+  },
 ];
 
 type ProjectCardProps = {
@@ -181,6 +212,7 @@ type ProjectCardProps = {
   tags: Array<{ name: string; color: string }>;
   image: string;
   source_code_link: string;
+  live_link: string;
 };
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -190,6 +222,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   tags,
   image,
   source_code_link,
+  live_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -207,7 +240,26 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover gap-2">
+            <div
+              onClick={() => window.open(live_link, "_blank")}
+              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors duration-300"
+              title="Live Link"
+            >
+              <svg
+                className="w-5 h-5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </div>
             <div
               onClick={() => window.open(source_code_link, "_blank")}
               className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer bg-black/50 backdrop-blur-sm hover:bg-black/70 transition-colors duration-300"
@@ -303,4 +355,4 @@ export default function Project() {
   );
 }
 
- 
+
