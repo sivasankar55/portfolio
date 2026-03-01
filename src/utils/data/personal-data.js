@@ -1,7 +1,7 @@
 export const personalData = {
   name: "Sivasankar",
   profile: '/profile.jpg',
-  designation: "Software Developer",
+  designation: "Full Stack Developer",
   description: "I'm Sivasankar, a passionate programmer with a love for learning and problem-solving. A quick learner and self-driven, I thrive on exploring new technologies and expanding my skills. My core expertise lies in JavaScript, and I enjoy building solutions with this versatile language. I am deeply interested in web application development and love contributing to making the web more accessible and dynamic. I'm open to job opportunities that align with my skills and interests.",
   email: 'sivasankar8875@gmail.com',
   phone: '+91 9747814097',
@@ -10,5 +10,5 @@ export const personalData = {
   linkedIn: 'https://www.linkedin.com/in/ctrl-bug/',
   leetcode: "",
   devUsername: "Sivasankar",
-  resume: "https://drive.google.com/file/d/1WdvZuAVaaZf2-C1x4GpWkJkh32Tw_Dfl/view"
+  resume: "https://drive.google.com/file/d/1HNHDR94EJ2VwovS8-E7etj4HCc25QmOd/view?usp=sharing"
 }
